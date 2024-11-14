@@ -1,0 +1,66 @@
+﻿/* General layout for dashboard container */
+.dashboard-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+/* Styling for each card */
+.card {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.05); /* Soft glass effect */
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    color: #ffffff;
+    transition: transform 0.3s, box-shadow 0.3s;
+    backdrop-filter: blur(8px);
+}
+
+    /* Hover effect for each card */
+    .card:hover {
+        transform: translateY(-5px) scale(1.03);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+/* Link styling inside cards */
+.card-body .card-text {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: inherit; /* Matches parent color */
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+    /* Link hover effect */
+    .card-body .card-text:hover {
+        color: #00bcd4; /* Neon effect for futuristic feel */
+    }
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .col-md-4 {
+        max-width: 100%;
+    }
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #ccc;
+    font-size: 0.9rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

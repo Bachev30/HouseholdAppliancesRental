@@ -2,32 +2,33 @@
     ViewData["Title"] = "Админ";
 }
 
-<div class="row text-center">
-    <div class="col-md-4">
-        <div class="card mb-4 box-shadow">
+<link rel="stylesheet" href="~/css/user.css" />
+<div class="dashboard-container row text-center">
+    <div class="col-md-4 dashboard-item">
+        <div class="card box-shadow">
             <div class="card-body">
-                <a asp-controller="Admin" asp-action="Users" class="card-text stretched-link" style="text-decoration:inherit; color:inherit">Потребители</a>
+                <a asp-controller="Admin" asp-action="Users" class="card-text stretched-link">Потребители</a>
             </div>
         </div>
     </div>
-    <div class="col-md-4">
-        <div class="card mb-4 box-shadow">
+    <div class="col-md-4 dashboard-item">
+        <div class="card box-shadow">
             <div class="card-body">
-                <a asp-controller="Category" class="card-text stretched-link" style="text-decoration:inherit; color:inherit">Категории</a>
+                <a asp-controller="Category" class="card-text stretched-link">Категории</a>
             </div>
         </div>
     </div>
-    <div class="col-md-4">
-        <div class="card mb-4 box-shadow">
+    <div class="col-md-4 dashboard-item">
+        <div class="card box-shadow">
             <div class="card-body">
-                <a asp-controller="Product" asp-action="Admin" class="card-text stretched-link" style="text-decoration:inherit; color:inherit">Продукти</a>
+                <a asp-controller="Product" asp-action="Admin" class="card-text stretched-link">Продукти</a>
             </div>
         </div>
     </div>
-    <div>
-        <div class="card mb-4 box-shadow">
+    <div class="col-md-4 dashboard-item">
+        <div class="card box-shadow">
             <div class="card-body">
-                <a asp-controller="Admin" asp-action="Rents" class="card-text stretched-link" style="text-decoration:inherit; color:inherit">Наеми</a>
+                <a asp-controller="Admin" asp-action="Rents" class="card-text stretched-link">Наеми</a>
             </div>
         </div>
     </div>

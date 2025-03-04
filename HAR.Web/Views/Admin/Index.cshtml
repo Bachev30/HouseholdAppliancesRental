@@ -1,35 +1,99 @@
 ﻿@{
-    ViewData["Title"] = "Админ";
+    ViewData["Title"] = "Админ Панел";
 }
 
-<link rel="stylesheet" href="~/css/user.css" />
-<div class="dashboard-container row text-center">
-    <div class="col-md-4 dashboard-item">
-        <div class="card box-shadow">
+<link rel="stylesheet" href="~/css/admin.css" />
+
+<style>
+    .dashboard-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 40px;
+    }
+
+    .dashboard-item {
+        width: 250px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+        .dashboard-item:hover {
+            transform: scale(1.1);
+        }
+
+    .card {
+        background: linear-gradient(135deg, #f0f0f0, #d6e4ff);
+        color: #333;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        padding: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        text-decoration: none;
+    }
+
+        .card:hover {
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, #d6e4ff, #f0f0f0);
+        }
+
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card i {
+        font-size: 60px;
+        margin-bottom: 15px;
+        color: #007bff;
+    }
+
+    .card-text {
+        font-size: 22px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #333;
+    }
+</style>
+
+<div class="dashboard-container">
+    <div class="dashboard-item">
+        <a asp-controller="Admin" asp-action="Users" class="card">
             <div class="card-body">
-                <a asp-controller="Admin" asp-action="Users" class="card-text stretched-link">Потребители</a>
+                <i class="fas fa-users"></i>
+                <span class="card-text">Потребители</span>
             </div>
-        </div>
+        </a>
     </div>
-    <div class="col-md-4 dashboard-item">
-        <div class="card box-shadow">
+    <div class="dashboard-item">
+        <a asp-controller="Category" asp-action="Index" class="card">
             <div class="card-body">
-                <a asp-controller="Category" class="card-text stretched-link">Категории</a>
+                <i class="fas fa-th"></i>
+                <span class="card-text">Категории</span>
             </div>
-        </div>
+        </a>
     </div>
-    <div class="col-md-4 dashboard-item">
-        <div class="card box-shadow">
+    <div class="dashboard-item">
+        <a asp-controller="Product" asp-action="Admin" class="card">
             <div class="card-body">
-                <a asp-controller="Product" asp-action="Admin" class="card-text stretched-link">Продукти</a>
+                <i class="fas fa-box"></i>
+                <span class="card-text">Продукти</span>
             </div>
-        </div>
+        </a>
     </div>
-    <div class="col-md-4 dashboard-item">
-        <div class="card box-shadow">
+    <div class="dashboard-item">
+        <a asp-controller="Admin" asp-action="Rents" class="card">
             <div class="card-body">
-                <a asp-controller="Admin" asp-action="Rents" class="card-text stretched-link">Наеми</a>
+                <i class="fas fa-shopping-cart"></i>
+                <span class="card-text">Наеми</span>
             </div>
-        </div>
+        </a>
     </div>
 </div>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>

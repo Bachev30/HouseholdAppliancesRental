@@ -12,6 +12,9 @@ html {
 
 body {
     margin-bottom: 60px;
+    background-image: url('../img/savin-ny-website-background-web1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
@@ -42,7 +45,7 @@ body {
 
 .animated-container {
     animation: fadeIn 1s ease-in-out;
-    background-image: url('../img/screenshot.png');
+    background-image: url('../img/simple-white-background-ftidy8nsmt2pv4ji.jpg');
     background-size: cover;
     background-position: center;
     padding: 5rem 2rem;
@@ -57,3 +60,6 @@ body {
     .btn-animated:hover {
         transform: scale(1.1);
     }
+
+
+
